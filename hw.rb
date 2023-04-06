@@ -3,8 +3,8 @@ arr = [3, 6, 1, 8, 2, 10]
 sorted = arr.sort
 min = sorted.first
 max = sorted.last
-puts "Найменший елемент: #{min}" # виведе "Найменший елемент: 1"
-puts "Найбільший елемент: #{max}" # виведе "Найбільший елемент: 10"
+puts "Найменший елемент: #{min}" 
+puts "Найбільший елемент: #{max}" 
 
 
 # 2 Обчислити суму елементів масиву
@@ -14,7 +14,7 @@ sum = 0
 arr.each do |item|
   sum += item
 end
-puts "Сума елементів : #{sum}" # виведе "Сума елементів масиву: 30"
+puts "Сума елементів : #{sum}" 
 
 
 # 3  Знайти кількість входжень заданого елементу у масив
@@ -26,15 +26,14 @@ for i in arr
     count += 1
   end
 end
-puts "Кількість входжень числа #{num} у масиві: #{count}" # виведе "Кількість входжень числа 6 у масиві: 1"
+puts "Кількість входжень числа #{num} у масиві: #{count}" 
 
 
 # 4 Видалити всі входження заданого елементу з масиву
 arr = [3, 6, 1, 8, 2, 10]
 num = 6
 new_arr = arr.reject { |i| i == num }
-puts " #{num}: #{new_arr}" # виведе "Масив без входжень числа 6: [3, 1, 8, 2, 10]"
-
+puts " #{num}: #{new_arr}" 
 
 # 5 Перевернути масив
 arr = [3, 6, 1, 8, 2, 10]
@@ -47,7 +46,7 @@ while i < j
   i += 1
   j -= 1
 end
-puts "Перевернутий масив: #{arr}" # виведе "Перевернутий масив: [10, 2, 8, 1, 6, 3]"
+puts "Перевернутий масив: #{arr}" 
 
 
 # 6 Вивести масив у зворотному порядку, не використовуючи метод reverse
@@ -78,19 +77,19 @@ puts odd_arr.inspect # виведе "[3, 1]"
 arr = [3, 6, 1, 8, 2, 10]
 squared_arr = []
 arr.each { |elem| squared_arr << elem ** 2 }
-puts squared_arr.inspect # виведе "[9, 36, 1, 64, 4, 100]"
+puts squared_arr.inspect 
 
 
 # 11 Перетворити масив в хеш, де ключами будуть елементи, а значеннями їх індекси у масиві
 arr = [3, 6, 1, 8, 2, 10]
 hash = Hash[arr.map.with_index.to_a]
-puts hash.inspect # виведе "{3=>0, 6=>1, 1=>2, 8=>3, 2=>4, 10=>5}"
+puts hash.inspect 
 
 
 # 12 Перетворити масив у новий масив, де кожен елемент - це сума його і попереднього елементів у початковому масиві
 arr = [3, 6, 1, 8, 2, 10]
 summed_arr = arr.inject([]) { |result, elem| result << (result.last.to_i + elem) }
-puts summed_arr.inspect # виведе "[3, 9, 7, 9, 10, 12]"
+puts summed_arr.inspect 
 
 
 # 13 Перетворити масив у новий масив, де кожен елемент - це сума його і всіх попередніх елементів у початковому масиві
@@ -101,14 +100,14 @@ arr.each do |elem|
   sum += elem
   summed_arr << sum
 end
-puts summed_arr.inspect # виведе "[3, 9, 10, 18, 20, 30]"
+puts summed_arr.inspect 
 
 
 # 14 Вивести індекс першого елементу масиву, який більше за задане число
 arr = [3, 6, 1, 8, 2, 10]
 number = 5
 index = arr.find_index { |elem| elem > number }
-puts index.inspect # виведе "1"
+puts index.inspect 
 
 
 
@@ -116,14 +115,14 @@ puts index.inspect # виведе "1"
 aarr = [3, 6, 1, 8, 2, 10, 6, 1]
 number = 6
 result_arr = arr.select { |elem| elem == number }
-puts result_arr.inspect # виведе "[6, 6]"
+puts result_arr.inspect 
 
 
 
 # 16 Перетворити масив строк у новий масив, де кожна строка записана у зворотному порядку
 arr = ["hello", "world", "ruby"]
 reversed_arr = arr.collect { |str| str.reverse }
-puts reversed_arr.inspect # виведе "["olleh", "dlrow", "ybur"]"
+puts reversed_arr.inspect 
 
 
 # 17 Вивести суму елементів масиву, які менші за задане число
@@ -131,7 +130,7 @@ arr = [3, 6, 1, 8, 2, 10]
 number = 5
 sum = 0
 arr.each { |elem| sum += elem if elem < number }
-puts sum.inspect # виведе "6"
+puts sum.inspect 
 
 
 
@@ -140,19 +139,19 @@ arr = [1, 2, 3, 4, 3, 2, 1, 5, 6, 5]
 counts = Hash.new(0)
 arr.each { |elem| counts[elem] += 1 }
 unique_count = counts.keys.length
-puts unique_count.inspect # виведе "6"
+puts unique_count.inspect 
 
 
 
 # 19 Перетворити масив строк у новий масив, де кожна строка записана в верхньому регістрі
 arr = ["hello", "world", "ruby"]
 upcased_arr = arr.collect { |str| str.upcase }
-puts upcased_arr.inspect # виведе "["HELLO", "WORLD", "RUBY"]"
+puts upcased_arr.inspect 
 
 
 # 20 Знайдіть суму перших 10 натуральних чисел
 sum = (1 + 10) * 10 / 2
-puts sum # виведе 55
+puts sum 
 
 
 # 21 Виведіть всі числа від 1 до 100, які діляться на 3 без остачі
@@ -163,7 +162,7 @@ puts sum # виведе 55
 
 # 22 Знайдіть факторіал числа 5 (5!)
 factorial = (1..5).inject(:*)
-puts factorial # виведе 120
+puts factorial 
 
 
 
@@ -176,13 +175,12 @@ while (c = a + b) <= 100
   a = b
   b = c
 end
-puts fibonacci.inspect # виведе "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]"
-
+puts fibonacci.inspect 
 
 # 24 Знайдіть кількість слів у рядку:
 string = "The quick brown fox jumps over the lazy dog"
 word_count = string.split.count
-puts word_count # виведе 9
+puts word_count 
 
 
 # ------ Ітератори ------------
@@ -191,14 +189,13 @@ puts word_count # виведе 9
 # 25 Знайдіть суму всіх чисел масиву
 numbers = [1, 2, 3, 4, 5]
 sum = numbers.sum
-puts sum # виведе 15
-
+puts sum 
 
 
 # 26 Знайдіть найбільше число в масиві
 numbers = [4, 2, 7, 1, 9, 5]
 max_number = numbers.reduce {|acc, i| acc > i ? acc : i}
-puts max_number # виведе 9
+puts max_number 
 
 
 
@@ -212,7 +209,7 @@ puts pairs
 nnumbers = [1, 2, 3, 4, 5]
 string_array = []
 numbers.each { |number| string_array << number.to_s }
-puts string_array.inspect # виведе ["1", "2", "3", "4", "5"]
+puts string_array.inspect 
 
 
 # 29 Виведіть всі парні числа масиву:
@@ -249,7 +246,7 @@ max = numbers[0]
 numbers.each do |num|
   max = num if num > max
 end
-puts max #=> 50
+puts max 
 
 
 
@@ -278,7 +275,6 @@ end
 def map_array(arr, &block)
   arr.map(&block)
 end
-
 arr = [1, 2, 3, 4, 5]
 squared = map_array(arr) { |num| num ** 2 } #=> [1, 4, 9, 16, 25]
 doubled = map_array(arr) { |num| num * 2 } #=> [2, 4, 6, 8, 10]
@@ -294,7 +290,7 @@ my_proc = Proc.new { |x| x > 5 }
 my_array = [2, 4, 6, 8, 10]
 filtered_array = my_array.select(&my_proc)
 # Виведення результату
-puts filtered_array.inspect # повинно вивести [6, 8, 10]
+puts filtered_array.inspect 
 
 
 
@@ -314,9 +310,10 @@ my_method { puts "Inside Proc" }
 # 38  Використання Proc для збереження коду  ?????
 addition_proc = Proc.new { |x, y| x + y }
 multiplication_proc = Proc.new { |x, y| x * y }
+
 # Виклик Proc в різних контекстах
-puts addition_proc.call(3, 4) # повинно вивести 7
-puts multiplication_proc.call(3, 4) # повинно вивести 12
+puts addition_proc.call(3, 4) # 
+puts multiplication_proc.call(3, 4) 
 
 
 
@@ -325,13 +322,13 @@ puts multiplication_proc.call(3, 4) # повинно вивести 12
 
 # 39 Використання лямбди для збільшення значення змінної
 increment = ->(x) { x + 1 }
-puts increment.call(5) #=> 6
+puts increment.call(5) 
 
 
 # 40 Використання лямбди для збільшення значення всіх елементів масиву
 arr = [1, 2, 3]
 increment = ->(n) { n + 1 }
-new_arr = arr.map(&increment) #=> [2, 3, 4]
+new_arr = arr.map(&increment) 
 
 
 # 41 Використання лямбди як методу об'єкту
@@ -348,12 +345,12 @@ puts min_num.call(5, 3)#=> 3
 # 43 Використання лямбди для визначення типу даних
 is_string = ->(obj) { obj.is_a?(String) }
 puts is_string.call("hello") #=> true
-puts is_string.call(123) #=> false
+puts is_string.call(123)
 
 
 
 # 44 Використання лямбди для генерації HTML-коду
 tag = lambda { |name, content| sprintf("<%s>%s</%s>", name, content, name) }
-tag.call("h1", "Hello world") #=> "<h1>Hello world</h1>"
+tag.call("h1", "Hello world") 
 
 
